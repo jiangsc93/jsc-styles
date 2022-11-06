@@ -1,0 +1,146 @@
+pre {
+	$line-numbers-width: 3em;
+	$inner-padding-x: 0.4em;
+	$inner-padding-y: 0.8em;
+
+	position: relative;
+	padding: 0;
+
+	code {
+		font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
+		color: #333333;
+		letter-spacing: 0;
+
+		&::before {
+			content: attr(data-language);
+			position: absolute;
+			top: 3px;
+			right: 5px;
+			color: #888;
+			font-size: 12px;
+			z-index: 1;
+		}
+	}
+
+	.code-container {
+		margin-left: $line-numbers-width;
+		padding: $inner-padding-y $inner-padding-x;
+		overflow: auto;
+		overflow: overlay;
+		position: relative;
+		z-index: 1;
+	}
+
+	.hljs-comment,
+	.hljs-quote {
+		color: #999988;
+		font-style: italic;
+	}
+
+	.hljs-keyword,
+	.hljs-selector-tag,
+	.hljs-subst {
+		color: #333333;
+		font-weight: bold;
+	}
+
+	.hljs-number,
+	.hljs-literal,
+	.hljs-variable,
+	.hljs-template-variable,
+	.hljs-tag .hljs-attr {
+		color: #008080;
+	}
+
+	.hljs-string,
+	.hljs-doctag {
+		color: #dd1144;
+	}
+
+	.hljs-title,
+	.hljs-section,
+	.hljs-selector-id {
+		color: #990000;
+		font-weight: bold;
+	}
+
+	.hljs-subst {
+		font-weight: normal;
+	}
+
+	.hljs-type,
+	.hljs-class .hljs-title {
+		color: #445588;
+		font-weight: bold;
+	}
+
+	.hljs-tag,
+	.hljs-name,
+	.hljs-attribute {
+		color: #000080;
+		font-weight: normal;
+	}
+
+	.hljs-regexp,
+	.hljs-link {
+		color: #009926;
+	}
+
+	.hljs-symbol,
+	.hljs-bullet {
+		color: #990073;
+	}
+
+	.hljs-built_in,
+	.hljs-builtin-name {
+		color: #0086b3;
+	}
+
+	.hljs-meta {
+		color: #999999;
+		font-weight: bold;
+	}
+
+	.hljs-deletion {
+		background: #ffdddd;
+	}
+
+	.hljs-addition {
+		background: #ddffdd;
+	}
+
+	.hljs-emphasis {
+		font-style: italic;
+	}
+
+	.hljs-strong {
+		font-weight: bold;
+	}
+
+	.line-numbers {
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		width: $line-numbers-width;
+		pointer-events: none;
+		background: rgba(0, 0, 0, 0.06);
+		letter-spacing: -1px;
+		user-select: none;
+		z-index: 1;
+		text-align: center;
+		padding-top: $inner-padding-y;
+		color: #999999;
+	}
+
+	.line-highlights {
+		position: absolute;
+		top: $inner-padding-y;
+		left: 0;
+		width: 100%;
+
+		&__line {
+			background-color: #fdecbf;
+		}
+	}
+}

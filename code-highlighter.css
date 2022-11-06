@@ -1,0 +1,120 @@
+pre {
+  position: relative;
+  padding: 0;
+}
+pre code {
+  font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
+  color: #333333;
+  letter-spacing: 0;
+}
+pre code::before {
+  content: attr(data-language);
+  position: absolute;
+  top: 3px;
+  right: 5px;
+  color: #888;
+  font-size: 12px;
+  z-index: 1;
+}
+pre .code-container {
+  margin-left: 3em;
+  padding: 0.8em 0.4em;
+  overflow: auto;
+  overflow: overlay;
+  position: relative;
+  z-index: 1;
+}
+pre .hljs-comment,
+pre .hljs-quote {
+  color: #999988;
+  font-style: italic;
+}
+pre .hljs-keyword,
+pre .hljs-selector-tag,
+pre .hljs-subst {
+  color: #333333;
+  font-weight: bold;
+}
+pre .hljs-number,
+pre .hljs-literal,
+pre .hljs-variable,
+pre .hljs-template-variable,
+pre .hljs-tag .hljs-attr {
+  color: #008080;
+}
+pre .hljs-string,
+pre .hljs-doctag {
+  color: #dd1144;
+}
+pre .hljs-title,
+pre .hljs-section,
+pre .hljs-selector-id {
+  color: #990000;
+  font-weight: bold;
+}
+pre .hljs-subst {
+  font-weight: normal;
+}
+pre .hljs-type,
+pre .hljs-class .hljs-title {
+  color: #445588;
+  font-weight: bold;
+}
+pre .hljs-tag,
+pre .hljs-name,
+pre .hljs-attribute {
+  color: #000080;
+  font-weight: normal;
+}
+pre .hljs-regexp,
+pre .hljs-link {
+  color: #009926;
+}
+pre .hljs-symbol,
+pre .hljs-bullet {
+  color: #990073;
+}
+pre .hljs-built_in,
+pre .hljs-builtin-name {
+  color: #0086b3;
+}
+pre .hljs-meta {
+  color: #999999;
+  font-weight: bold;
+}
+pre .hljs-deletion {
+  background: #ffdddd;
+}
+pre .hljs-addition {
+  background: #ddffdd;
+}
+pre .hljs-emphasis {
+  font-style: italic;
+}
+pre .hljs-strong {
+  font-weight: bold;
+}
+pre .line-numbers {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 3em;
+  pointer-events: none;
+  background: rgba(0, 0, 0, 0.06);
+  letter-spacing: -1px;
+  user-select: none;
+  z-index: 1;
+  text-align: center;
+  padding-top: 0.8em;
+  color: #999999;
+}
+pre .line-highlights {
+  position: absolute;
+  top: 0.8em;
+  left: 0;
+  width: 100%;
+}
+pre .line-highlights__line {
+  background-color: #fdecbf;
+}
